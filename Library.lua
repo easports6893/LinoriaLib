@@ -70,7 +70,7 @@ local function GetPlayersString()
     local PlayerList = Players:GetPlayers();
 
     for i = 1, #PlayerList do
-        PlayerList[i] = `{PlayerList[i].Name} [{PlayerList[i].DisplayName}]`;
+        PlayerList[i] = `{PlayerList[i].DisplayName} [{PlayerList[i].Name}]`;
     end;
 
     return PlayerList;
