@@ -70,10 +70,8 @@ local function GetPlayersString()
     local PlayerList = Players:GetPlayers();
 
     for i = 1, #PlayerList do
-        PlayerList[i] = PlayerList[i].Name;
+        PlayerList[i] = `{PlayerList[i].Name} [{PlayerList[i].DisplayName}];
     end;
-
-    table.sort(PlayerList, function(str1, str2) return str1 < str2 end);
 
     return PlayerList;
 end;
