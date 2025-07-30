@@ -1922,8 +1922,6 @@ do
             Library:UpdateDependencyBoxes();
         end;
 
-        Toggle:SetValue(Toggle.Value)
-
         ToggleRegion.InputBegan:Connect(function(Input)
             if Input.UserInputType == Enum.UserInputType.MouseButton1 and not Library:MouseIsOverOpenedFrame() then
                 Toggle:SetValue(not Toggle.Value) -- Why was it not like this from the start?
@@ -1946,6 +1944,8 @@ do
         setmetatable(Toggle, BaseAddons);
 
         Toggles[Idx] = Toggle;
+
+        Toggle:SetValue(Toggle.Value)
 
         Library:UpdateDependencyBoxes();
 
