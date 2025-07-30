@@ -1945,9 +1945,11 @@ do
 
         Toggles[Idx] = Toggle;
 
-        Toggle:SetValue(Toggle.Value)
+        
 
         Library:UpdateDependencyBoxes();
+
+        Toggle:SetValue(Toggle.Value)
 
         return Toggle;
     end;
